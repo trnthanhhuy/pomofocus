@@ -1,5 +1,28 @@
+/* Nền blur */
+.bg-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: blur(10px);
+  opacity: 0.75; /* có thể tăng/giảm */
+}
+
+/* Đảm bảo nội dung phía trên không bị ảnh hưởng */
 body {
-  background: #f5f5f5;
+  margin: 0;
+  font-family: sans-serif;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: none; /* có thể bỏ qua nếu không dùng glass effect */
+}
+
+body {
   font-family: 'Segoe UI', sans-serif;
   display: flex;
   align-items: center;
@@ -10,7 +33,6 @@ body {
 
 .container {
   text-align: center;
-  background: white;
   padding: 40px;
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
@@ -36,4 +58,40 @@ body {
 
 .buttons button:hover {
   background: #e04e4e;
+}
+.set-time {
+  margin-bottom: 20px;
+}
+
+.set-time {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.set-time input {
+  width: 60px;
+  padding: 5px;
+  margin: 0 5px;
+  text-align: center;
+}
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+body {
+  margin-top: 60px;
+}
+#local-clock {
+  display: block;
+  margin-top: 12px;
+  font-size: 2em;
+  font-weight: bold;
+}
+.hidden {
+  display: none !important;
 }

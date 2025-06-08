@@ -5,10 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PomoFocus ⏳</title>
   <link rel="stylesheet" href="style.css"/>
+  <style>
+
+  </style>
 </head>
-<body>
+<body>  
+  <div class="bg-blur"></div>
+  <div>
+  <header>
+    <h2>Bây giờ là:</h2>
+    <h1 id="local-clock">Đang tải giờ...</h1>
+  </header>
+  </div>
   <div class="container">
     <h1>PomoFocus 🍅</h1>
+    <div class="set-time">
+      <label for="hours">🕒 Giờ: </label>
+      <input type="number" id="hours" value="0" min="0" max="24">
+      <label for="minutes">⏱ Phút: </label>
+      <input type="number" id="minutes" value="25" min="0" max="59">
+    </div>
     <div id="timer">25:00</div>
     <div class="buttons">
       <button id="start">Start</button>
